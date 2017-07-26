@@ -48,8 +48,8 @@ try:
     # 获取有数据的区域最大行号列号: sum(1 for _ in sheet1.columns)  sum(1 for _ in sheet1.rows)
     print("sheet1 相关信息 ", type(sheet1), sheet1.title, sum(1 for _ in sheet1.columns), sum(1 for _ in sheet1.rows))
     print("max_column", sheet1.max_column, sheet1.max_row, len(sheet1['A']))
-    colA = tuple(sheet1.columns)[:1]
-    print("col length: ", len(colA))
+    # colA = tuple(sheet1.columns)[:1]
+    # print("col length: ", len(colA))
 
     # 获取指定单元格对象
     cell = sheet1['a1']
