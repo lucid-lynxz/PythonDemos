@@ -26,3 +26,13 @@ print(m.group(0))  # 返回原始字符串
 print(m.group(1))  # 返回第1个子串
 print(m.group(2))  # 返回第2个子串
 
+# match判定字符串是否符合给定的规则
+# search可以提取按给定规则提取子串
+s = '"=?gb2312?B?zNrRtsbz0rXTys/k?="'
+match = re.search(r'=\?.*\?=', s)
+print(s, "   搜索子串结果:   ", match)
+if match:
+    result = match.group()
+    print('获取子串成功: ', result)
+else:
+    print('获取子串失败')
