@@ -15,9 +15,9 @@ import email, imaplib, base64, re
 smtp_server = 'smtp.exmail.qq.com'
 imap_server = 'imap.exmail.qq.com'
 # sender_qq为发件人的qq号码
-email_account = '44***@qq.cn'
+email_account = 'lynxz@xxx.com'
 # pwd为邮箱密码或者授权码
-pwd = 'lynx***'
+pwd = 'lynxxxx'
 # 收件人邮箱
 receiver = '55***@qq.com'
 
@@ -28,6 +28,7 @@ mail_content = 'python登录qq邮箱发邮件测试'
 
 
 # 对收取的邮件内容进行解码显示,源数据类似: '"=?gb2312?B?zNrRtsbz0rXTys/k?="   <10000@qq.com>'
+# 参考: https://stackoverflow.com/questions/12903893/python-imap-utf-8q-in-subject-string
 def decode_mail_info(info):
     # 可能报错: TypeError: expected string or bytes-like object ,比如 撤回邮件时
     # print("==> ", type(info), isinstance(info, (str, bytes)), info)
@@ -51,30 +52,6 @@ def decode_mail_info(info):
         result_info = info
     print("result_info = ", result_info)
     return result_info
-    # match = re.search(r'=\?.*\?=', info)
-    # if match:
-    #     result = match.group()
-    #     text, encoding = decode_header(result)[0]
-    #     actualValue = str(text, encoding=str(encoding))
-    #     print("==>", actualValue)
-    #     # print("%s -----> %s \n %s" % (text, encoding, actualValue))
-    #
-    #     # data = result.split(sep='?')
-    #     # if len(data) >= 5:
-    #     #     src_coding = data[1]
-    #     #     cur_coding = data[2]
-    #     #     value = data[3]  # =?UTF-8?Q?***?=
-    #     #     decode_result = base64.b64decode(value)
-    #     #     print("src_coding is : %s , %s , %s , %s" % (src_coding, str(src_coding), decode_result, value))
-    #     #     # actualValue = str(decode_result, encoding=str(src_coding)) + detail
-    #     #     actualValue = str(b'\xe5\x8d\x87\xe7\xba\xa7', encoding=str(src_coding)) + detail
-    #     #     print("ori: %s\tnow: %s" % (info, actualValue))
-    #     #     return actualValue
-    #     # else:
-    #     #     return info
-    # else:
-    #     print("未找到有效信息 %s " % info)
-    #     return info
 
 
 # 使用指定sender邮箱账号密码,登录到 smtp_server 服务器(smtp服务器,使用ssl),发送邮件给指定receiver
@@ -104,40 +81,38 @@ def get_mail_by_imap_ssl(email_account='', email_pwd='', imap_server='', ssl_por
     search() 搜索指定类型的邮件
     参考: http://blog.csdn.net/longzhiwen888/article/details/46562723
     ALL - 所有邮件
-    Recent - 未读邮件,我测试了下貌似无效
+    UNSEEN - 未读邮件
     Seen - 已读邮件
     Answered - 已回复的邮件
     '''
-    type, data = conn.search(None, 'ALL')  # 搜索匹配目录下的邮件
-    # for num in data[0].split():
-    #     email_type, email_data = conn.fetch(num, '(RFC822)')
-    #     print('Message %s\n%s\n' % (num, email_data[0][1]))
+    type, data = conn.search(None, 'UNSEEN')  # 搜索匹配目录下的邮件
     newList = data[0].split()
     mail_count = len(newList)
     if mail_count == 0:
         print("未搜索到符合条件的邮件")
         return
-    # print("总邮件数量: ", mail_count)
-    type, data = conn.fetch(newList[mail_count - 1], '(RFC822)')  # 读取最新的邮件信息
-    msg = email.message_from_bytes(data[0][1])
-    '''
-    b'Date: Mon, 12 Dec 2016 17:41:30 +0800\r\n
-    From: "=?gb2312?B?zNrRtsbz0rXTys/k?=" <10000@qq.com>\n
-    To: "=?gb2312?B?zNrRtsbz0rXTys/k08O7pw==?="\n
-    Subject: =?gb2312?B?u7bTrcq508PM2tG2xvPStdPKz+Q=?=\n
-    X-QQ-STYLE: 1\n
-    Content-Type: text/html;\n
-    charset="gb2312"\n\n
-    <!DOCTYPE html*****n'
-    '''
-    # print(data[0][1])
-    sender = decode_mail_info(msg.get("From"))  # 发件人
-    receiver = decode_mail_info(msg.get("To"))  # 收件人
-    subject = decode_mail_info(msg.get('subject'))  # 邮件主题
-    date = decode_mail_info(msg.get('date'))  # 邮件时间
+    print("总邮件数量: ", mail_count)
+    for mail in newList:
+        type, data = conn.fetch(mail, '(RFC822)')  # 读取最新的邮件信息
+        msg = email.message_from_bytes(data[0][1])
+        '''
+        b'Date: Mon, 12 Dec 2016 17:41:30 +0800\r\n
+        From: "=?gb2312?B?zNrRtsbz0rXTys/k?=" <10000@qq.com>\n
+        To: "=?gb2312?B?zNrRtsbz0rXTys/k08O7pw==?="\n
+        Subject: =?gb2312?B?u7bTrcq508PM2tG2xvPStdPKz+Q=?=\n
+        X-QQ-STYLE: 1\n
+        Content-Type: text/html;\n
+        charset="gb2312"\n\n
+        <!DOCTYPE html*****n'
+        '''
+        print("==>\n", data[0][1])
+        sender = decode_mail_info(msg.get("From"))  # 发件人
+        receiver = decode_mail_info(msg.get("To"))  # 收件人
+        subject = decode_mail_info(msg.get('subject'))  # 邮件主题
+        date = decode_mail_info(msg.get('date'))  # 邮件时间
     conn.close()
     conn.logout()
-    # msg.get('subject') 得到的邮件主体内容: =?gb2312?B?u7bTrcq508PM2tG2xvPStdPKz+Q=?=
+    # msg.get('subject') 得到的邮件主体内容: =?gb2312?B?u7bTrcq508PM2tG2xvPStdPKz+Q=?=\r\n=?gb2312?B?u7bTrcq508PM2tG2xvPStdPKz+Q=?=
     # 参考: http://blog.renren.com/share/222201157/12379181045 得到如下分解含义:
     # =?  ....  ?= 表示开头和结束标识符,不同参数使用?分隔
     # gb2312 表示原始编码
