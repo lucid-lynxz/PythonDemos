@@ -44,6 +44,7 @@ def initWorkBook(*columnName, fileName="qq_market.xlsx"):
     # 创建新表并写入列名
     columnSize = len(columnName)
     sheet = wb.create_sheet("market_%s" % (time.strftime("%Y%m%d%H%M%s", time.localtime(time.time()))))
+    print("创建表名:%s  %s" % (sheet.title, columnSize))
     if columnSize > 0:
         try:
             for x in range(0, columnSize):
@@ -71,10 +72,10 @@ def appendItem(*info):
 
 
 def close():
-    global  wb
+    global wb
     if wb:
         wb.save(targetFileName)
         wb.close()
 
 # initWorkBook(*[x for x in range(1, 10)])
-appendItem(*["hello", "hello", "hello", "hello", "hello"])
+# appendItem(*["hello", "hello", "hello", "hello", "hello"])

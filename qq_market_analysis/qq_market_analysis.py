@@ -27,22 +27,23 @@ def getPageInfo(pageIndex=0):
     result = response.text
     if response.status_code == 200:
         print("获取成功 %s" % pageIndex)
+        pageObj = json.loads(result)
+        if pageObj['success']:
+            return pageObj
+        else:
+            print("json数据异常:", result)
     else:
         print("获取失败")
-    print(result)
-    return result
+        # print(result)
 
 
-'''
-打算存储的信息:
-appName
-fileSize
-appDownCount
-categoryName
-apkUrl
-pkgName
-versionName
-'''
-
-excelUtil.initWorkBook(*["hello", "hello"])
-# getPageInfo(3)
+if __name__ == '__main__':
+    columnNames = ["appName", "categoryName", "fileSize", "appDownCount", "apkUrl", "pkgName", "versionName"]
+    excelUtil.initWorkBook(*columnNames)
+    for x in range(0, 5):
+        page = getPageInfo(x)
+        if page:
+            for appInfo in page['obj']:
+                item = [appInfo[x] for x in columnNames]
+                excelUtil.appendItem(*item)
+    excelUtil.close()
