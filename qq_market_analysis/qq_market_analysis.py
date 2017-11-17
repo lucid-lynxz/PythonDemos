@@ -8,7 +8,7 @@
 
 __author__ = "lynxz"
 
-import requests, json
+import requests, json, os
 # from .excel_util import *
 import excel_util as excelUtil
 
@@ -37,13 +37,43 @@ def getPageInfo(pageIndex=0):
         # print(result)
 
 
+def downloadApk(apkUrl, apkName, subFolderName="apkDownload"):
+    print("downloadApk.... %s %s" % (apkName, apkUrl))
+    targetFolder = os.path.join("./", subFolderName)
+    if not os.path.exists(targetFolder):
+        os.mkdir(targetFolder)
+    targetApkPath = os.path.join(targetFolder, apkName)
+    if os.path.exists(targetApkPath):
+        print("下载 %s 失败, apk文件已存在,继续下一个apk下载" % apkName)
+    else:
+        response = session.get(apkUrl)
+        if response.status_code == 200:
+            with open(targetApkPath, "wb") as f:
+                f.write(response.content)
+            print("下载 %s 成功" % apkName)
+        else:
+            print("下载apk: %s 失败: %s" % (apkName, response.status_code))
+
+
 if __name__ == '__main__':
-    columnNames = ["appName", "categoryName", "fileSize", "appDownCount", "apkUrl", "pkgName", "versionName"]
+    appList = []
+    columnNames = ["appName", "appId", "categoryName", "fileSize", "appDownCount",
+                   "apkUrl", "pkgName", "versionName", "localApkFileName"]
     excelUtil.initWorkBook(*columnNames)
     for x in range(0, 5):
-        page = getPageInfo(x)
-        if page:
-            for appInfo in page['obj']:
-                item = [appInfo[x] for x in columnNames]
-                excelUtil.appendItem(*item)
+        retry = 0
+        while (retry <= 3):
+            retry += 1
+            page = getPageInfo(x)
+            if page:
+                for appInfo in page['obj']:
+                    appInfo["localApkFileName"] = "%s_%s.apk" % (appInfo["appName"], appInfo["appId"])
+                    item = [appInfo[x] for x in columnNames]
+                    appList.append(item)
+                    excelUtil.appendItem(*item)
+                break
     excelUtil.close()
+
+    print("共抓取app:%s个" % len(appList))
+    for app in appList:
+        downloadApk(app[5], app[8])
