@@ -3,8 +3,10 @@
 
 使用脚本 `qq_market_download.py` 来从腾讯应用宝市场下载前100的应用apk,并在当前目录下生成 `qq_market.xlsx` 文件,记录apk的一些信息;
 使用脚本 `analysis_apk.py` 来对下载完成后的apk进行分析,提取其中的 `minSdkVersion` 和 `targetSdkVersion` 信息,并更新进 `qq_market.xlsx` 文件中;
+若是不想再下一次所有apk,可以到我 [网盘](https://pan.baidu.com/s/1bMkAwm) 下下载, 100个apk, 3.3G 大小...
 
-需要最的是:
+
+需要注意的是:
 1. 下载apk保存时,文件名中的空格,竖线(|)以及小括号都要进行替换, 以便后续在shell中执行命令时,不会被当做特殊字符而导致命令失败;
 2. 从apk中提取 `AndroidManifest.xml` ,原本是想用 `apktool` , 但是发现他反编译的manifest文件就是缺少我需要的这个标签内容,真是奇了个怪了;
     而用 `jadx` 等工具的话,倒是可以得到正确的 `manifest` 文件,但是经常会反编译失败,最后直接用的 AndroidSdk 中 aapt 工具提取,一切正常,速度也很快;
