@@ -47,7 +47,15 @@ else:
 
 
 # 正则替换
+content = "lynxz-333ha(h|(a)"
 link = re.compile("\d+")
-content = "lynxz-333haha"
-info = re.sub(link,'www.github.com',content)
-print(info)
+info = re.sub(link,'_',content)
+print("替换数字后:  ",info)
+# 替换竖线
+vline = re.compile("\|")
+info = re.sub(vline,'_',content)
+print("替换竖线: ",info)
+bracket = re.compile("\(|\)")
+info = re.sub(bracket,'_',content)
+print("替换括号:  ",info)
+

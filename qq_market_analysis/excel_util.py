@@ -138,9 +138,10 @@ def getAllItemList(srcExcelFilePath=targetFileName, sheetName=''):
         allItem = []
         columnSize = len(sheet[1])
         rowSize = len(sheet['A'])
-        columnNames = [sheet.cell(row=1, column=x) for x in range(1, columnSize + 1)]
+        columnNames = [sheet.cell(row=1, column=x).value for x in range(1, columnSize + 1)]
         for x in range(2, rowSize + 1):
             item = {}
+            item['row_index'] = x
             for y in range(1, columnSize):
                 item[columnNames[y]] = sheet.cell(row=x, column=y + 1).value
             allItem.append(item)
@@ -159,6 +160,6 @@ def close():
 # appendInfo('', 2, "hello2", "minSdkVersion")
 # appendInfo('', 2, "hello3", "targetSdkVersion")
 # close()
-# print("allSize = ", len(getAllItemList()))
+print("allSize = ", len(getAllItemList()))
 # initWorkBook(*[x for x in range(1, 10)])
 # appendItem(*["hello", "hello", "hello", "hello", "hello"])

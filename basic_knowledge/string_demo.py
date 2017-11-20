@@ -26,8 +26,15 @@ for msg in data:
 
 # 字符串替换
 import re
+
 s = "he     l   l o "
 s1 = s.replace(' ', "=")
 space = re.compile(r"\s+")
 s2 = re.sub(space, "_", s)
 print(s, s1, s2)
+
+# 删除换行符
+s = "hello\n"
+print("原始字符串:", s, "-----")
+s = s.replace("\n", "")
+print("删除换行后: ", s, "-----")

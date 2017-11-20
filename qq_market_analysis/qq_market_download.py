@@ -8,7 +8,7 @@
 
 __author__ = "lynxz"
 
-import requests, json, os
+import requests, json, os, re
 # from .excel_util import *
 import excel_util as excelUtil
 
@@ -67,7 +67,16 @@ if __name__ == '__main__':
             page = getPageInfo(x)
             if page:
                 for appInfo in page['obj']:
-                    appInfo["localApkFileName"] = "%s_%s.apk" % (appInfo["appName"], appInfo["appId"])
+                    tempFileName = "%s_%s.apk" % (appInfo["appName"], appInfo["appId"])
+                    # 文件名中的空格替换为下划线,不然后续执行shell命令时可能会报错
+                    space = re.compile("\s+")
+                    vline = re.compile("\|")
+                    bracket = re.compile("\(|\)")
+
+                    tempFileName = re.sub(space, "_", tempFileName)
+                    tempFileName = re.sub(vline, "_", tempFileName)
+                    tempFileName = re.sub(bracket, "_", tempFileName)
+                    appInfo["localApkFileName"] = tempFileName
                     item = [appInfo.get(x, "") for x in columnNames]
                     appList.append(item)
                     excelUtil.appendItem(*item)
@@ -75,5 +84,5 @@ if __name__ == '__main__':
     excelUtil.close()
 
     print("共抓取app:%s个" % len(appList))
-    # for app in appList:
-    #     downloadApk(app[5], app[8])
+    for app in appList:
+        downloadApk(app[5], app[8])
