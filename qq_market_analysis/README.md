@@ -1,10 +1,10 @@
 从腾讯应用宝上下载的 `天天P图(V5.2.0.5739)` 只有1byte,所以我从百度手机市场下了一个(`V5.2.0.1706`), 版本有点区别,不过不影响;
 `百度输入法` 没下载成功,我也是从百度市场上下了一个,版本一样
 
-使用脚本 `qq_market_download.py` 来从腾讯应用宝市场下载前100的应用apk,并在当前目录下生成 `qq_market.xlsx` 文件,记录apk的一些信息;
-使用脚本 `analysis_apk.py` 来对下载完成后的apk进行分析,提取其中的 `minSdkVersion` 和 `targetSdkVersion` 信息,并更新进 `qq_market.xlsx` 文件中;
-若是不想再下一次所有apk,可以到我 [网盘](https://pan.baidu.com/s/1bMkAwm) 下下载, 100个apk, 3.3G 大小...
+1. 使用脚本 `qq_market_download.py` 来从腾讯应用宝市场下载前100的应用apk,并在当前目录下生成 `qq_market.xlsx` 文件,记录apk的一些信息;
+2. 使用脚本 `analysis_apk.py` 来对下载完成后的apk进行分析,提取其中的 `minSdkVersion` 和 `targetSdkVersion` 信息,并更新进 `qq_market.xlsx` 文件中;
 
+若是不想再下一次所有apk,可以到我 [网盘](https://pan.baidu.com/s/1bMkAwm) 下下载, 100个apk, 3.3G 大小...
 
 需要注意的是:
 1. 下载apk保存时,文件名中的空格,竖线(|)以及小括号都要进行替换, 以便后续在shell中执行命令时,不会被当做特殊字符而导致命令失败;
@@ -13,6 +13,7 @@
 3. 通过 `aapt` 提取指定属性时,需要注意处理多个相同属性的问题, 有可能xml中存在多条 `<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="23" />`;
 
 结果:
+
 很意外的数据, `14` 竟然占据了半壁江山, 呵呵哒, 谁能告诉我为什么? 
 
 ![minSdk分布图](https://github.com/lucid-lynxz/PythonDemos/blob/master/res/minSdkVersion%E5%88%86%E5%B8%83%E5%9B%BE.png?raw=tru)
