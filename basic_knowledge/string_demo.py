@@ -23,3 +23,11 @@ print(s.startswith("=?"), s.endswith("?="))
 data = s.split(sep='?')
 for msg in data:
     print(msg)
+
+# 字符串替换
+import re
+s = "he     l   l o "
+s1 = s.replace(' ', "=")
+space = re.compile(r"\s+")
+s2 = re.sub(space, "_", s)
+print(s, s1, s2)
