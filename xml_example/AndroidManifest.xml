@@ -1,0 +1,1334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest 
+    xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="10000700" android:versionName="10.0.7" package="com.sds.android.ttpod" platformBuildVersionCode="23" platformBuildVersionName="6.0-2166767">
+    <uses-sdk android:minSdkVersion="14" android:targetSdkVersion="22" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.GET_PACKAGE_SIZE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.SET_WALLPAPER_HINTS" />
+    <uses-permission android:name="com.baidu.appsearch.extinvoker.LAUNCH" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-feature android:name="android.hardware.camera" android:required="true" />
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="true" />
+    <uses-permission android:name="android.permission.ACCESS_FIND_LOCATION" />
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_ADDED" />
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_CHANGED" />
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_INSTALL" />
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_REPLACED" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <supports-screens android:anyDensity="true" android:smallScreens="true" android:normalScreens="true" android:largeScreens="true" />
+    <uses-permission android:name="android.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.sec.android.provider.badge.permission.READ" />
+    <uses-permission android:name="com.sec.android.provider.badge.permission.WRITE" />
+    <uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT" />
+    <uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE" />
+    <uses-permission android:name="com.anddoes.launcher.permission.UPDATE_COUNT" />
+    <uses-permission android:name="com.majeur.launcher.permission.UPDATE_BADGE" />
+    <uses-permission android:name="com.huawei.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.huawei.android.launcher.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_UPDATES" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+    <application android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:label="@string/app_name" android:icon="@mipmap/ic_launcher" android:name="com.ali.music.entertainment.TTEApplication" android:taskAffinity="com.sds.android.ttpod.task" android:allowBackup="false" android:largeHeap="true" android:supportsRtl="true">
+        <meta-data android:name="com.ali.music.entertainment.TTGlideModule" android:value="GlideModule" />
+        <activity android:theme="@style/Theme.Main" android:label="@string/app_name" android:name="com.ali.music.entertainment.presentation.view.home.MainActivity" android:exported="false" android:launchMode="singleTask" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:windowSoftInputMode="adjustResize|adjustNothing">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/Theme.Splash" android:name="com.ali.music.entertainment.splash.SplashActivity" android:exported="true" android:stateNotNeeded="true" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateUnchanged|stateHidden|stateAlwaysHidden|stateAlwaysVisible" android:noHistory="false">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="com.nd.android.pandahome.widget.category" />
+                <action android:name="com.gau.go.launcherex.gowidget" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.ali.music.music.framework.base.Action.start_entry" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="ttpod" />
+                <data android:scheme="alimusic" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.ali.music.music.player_entry" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.ali.music.music.framework.base.Action.start_audio_download_manager" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.ali.music.music.framework.base.Action.start_video_download_manager" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.ali.music.music.framework.base.Action.open_download_completed_page" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="android.taobao.atlas.runtime.AtlasFakeActivity" />
+        <activity android:theme="@style/DialogActivityTheme" android:name="com.ali.music.entertainment.presentation.view.commentguide.CommentGuideActivity" android:exported="false" />
+        <activity android:theme="@style/DialogActivityTheme" android:name="com.ali.music.entertainment.presentation.view.versionupdate.VersionUpdateForceInstallActivity" android:exported="false" />
+        <activity android:theme="@style/DialogActivityTheme" android:name="com.ali.music.entertainment.presentation.view.versionupdate.VersionUpdateForceDownloadActivity" android:exported="false" />
+        <activity android:theme="@style/DialogActivityTheme" android:name="com.ali.music.entertainment.presentation.view.versionupdate.VersionUpdateNormalDownloadActivity" android:exported="false" />
+        <activity android:theme="@style/DialogActivityTheme" android:name="com.ali.music.entertainment.presentation.view.versionupdate.VersionUpdateNormalInstallActivity" android:exported="false" />
+        <service android:name="com.sds.android.ttpod.TaobaoIntentService" android:exported="true">
+            <intent-filter>
+                <action android:name="org.agoo.android.intent.action.RECEIVE" />
+            </intent-filter>
+        </service>
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.ali.music.entertainment.presentation.view.welcome.WelcomeActivity" android:exported="false" android:screenOrientation="portrait" />
+        <activity android:theme="@*android:style/Theme.Translucent" android:name="com.ali.music.entertainment.presentation.view.exception.ExceptionSendActivity" android:exported="false" android:stateNotNeeded="true" android:screenOrientation="portrait" />
+        <activity android:theme="@style/Theme.SlidingClosableActivityMain" android:name="com.ali.music.entertainment.presentation.view.activity.ReleaseActivity" android:exported="false" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/page_release" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.ali.music.entertainment.presentation.view.home.EmptyActivity" android:exported="false" />
+        <activity android:name="com.alipay.sdk.app.H5PayActivity" android:exported="false" android:screenOrientation="behind" android:configChanges="keyboardHidden|navigation|orientation" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustResize|adjustNothing" />
+        <activity android:name="com.alipay.sdk.auth.AuthActivity" android:exported="false" android:screenOrientation="behind" android:configChanges="keyboardHidden|navigation|orientation" />
+        <receiver android:name="com.ali.music.userbehaviour.UserBehaviourReceiver" android:exported="false">
+            <intent-filter>
+                <action android:name="com.ali.music.intent.action.USER_BEHAVIOUR" />
+            </intent-filter>
+        </receiver>
+        <service android:name="anetwork.channel.aidl.NetworkService" android:exported="false">
+            <intent-filter>
+                <action android:name="anetwork.channel.aidl.IRemoteNetworkGetter" />
+            </intent-filter>
+        </service>
+        <service android:name="mtopsdk.xstate.XStateService" android:exported="false">
+            <intent-filter>
+                <action android:name="mtopsdk.xstate.aidl.IXState" />
+            </intent-filter>
+        </service>
+        <service android:name="com.baidu.location.f" android:enabled="true" android:process=":remote" />
+        <service android:name="com.alibaba.mtl.appmonitor.AppMonitorService" />
+        <activity android:theme="@style/Theme.SlidingClosableActivity" android:name="com.ali.music.runtimepermissionutil.PermissionActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustResize|adjustNothing">
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.publish" />
+        </activity>
+        <activity android:theme="@style/Theme.SlidingClosableActivityMain" android:name="com.ali.music.setting.presentation.view.activity.SettingEntryActivity" android:exported="false" android:launchMode="singleTask" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/global_setting" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.setting" />
+        </activity>
+        <activity android:theme="@style/Theme.SlidingClosableActivityMain" android:name="com.ali.music.setting.presentation.view.activity.AboutActivity" android:exported="false" android:launchMode="singleTask" android:screenOrientation="portrait">
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.setting" />
+        </activity>
+        <activity android:theme="@style/Theme.SlidingClosableActivityMain" android:name="com.ali.music.setting.presentation.view.activity.CleanCacheSettingActivity" android:exported="false" android:launchMode="singleTask" android:screenOrientation="portrait">
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.setting" />
+        </activity>
+        <activity android:theme="@style/Theme.SlidingClosableActivityMain" android:name="com.ali.music.setting.presentation.view.activity.FeedbackDetailActivity" android:exported="false" android:launchMode="singleTask" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/feedback_detail" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.setting" />
+        </activity>
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.ali.music.mypage.view.MyActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/host_my_home" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.mypage" />
+        </activity>
+        <meta-data android:name="com.amap.api.v2.apikey" android:value="f50d7a5b89a1e90b4620cfe1eb7abe4c" />
+        <service android:name="com.amap.api.location.APSService">
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.location" />
+        </service>
+        <service android:name="com.ali.music.location.service.LocationService">
+            <intent-filter>
+                <action android:name="com.ali.music.aidlservice.location.ILocationService" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.location" />
+        </service>
+        <activity android:theme="@*android:style/Theme.NoTitleBar.Fullscreen" android:name="com.ali.music.scanner.MainScanActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/global_scan" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.scanner" />
+        </activity>
+        <activity android:name="com.ali.music.ma.MAScanActivity">
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.scanner" />
+        </activity>
+        <activity android:name="com.ali.music.fans.guide.presentation.view.activity.FansGuideActivity" android:exported="false" android:screenOrientation="portrait" android:configChanges="orientation|screenSize">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/fans_guide" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.fans.guide" />
+        </activity>
+        <receiver android:name="com.ali.music.fans.guide.presentation.receiver.HomeDisplayReceiver" android:exported="false">
+            <intent-filter>
+                <action android:name="com.ali.music.init.homedisplay" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.fans.guide" />
+        </receiver>
+        <activity android:name="com.ali.music.manager.address.presentation.view.activity.ManageAddressActivity" android:exported="false" android:screenOrientation="portrait" android:configChanges="orientation|screenSize">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/global_shipping_address_manage" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.manager" />
+        </activity>
+        <activity android:name="com.ali.music.manager.address.presentation.view.activity.ChooseAddressActivity" android:exported="false" android:screenOrientation="portrait" android:configChanges="orientation|screenSize">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/address_manager_choose" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.manager" />
+        </activity>
+        <activity android:name="com.ali.music.manager.address.presentation.view.activity.ModifyAddressActivity" android:screenOrientation="portrait" android:configChanges="orientation|screenSize">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/address_manager_modify" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.manager" />
+        </activity>
+        <activity android:name="com.ali.music.manager.address.presentation.view.activity.AddAddressActivity" android:exported="false" android:screenOrientation="portrait" android:configChanges="orientation|screenSize">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/address_manager_add" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.manager" />
+        </activity>
+        <activity android:name="com.ali.music.explore.presentation.view.ExploreTabActivity" android:exported="false">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/explore_tab" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.explore" />
+        </activity>
+        <service android:name="com.taobao.orange.accssupport.OrangeAccsService" android:exported="false">
+            <intent-filter>
+                <action android:name="com.taobao.accs.intent.action.RECEIVE" />
+            </intent-filter>
+        </service>
+        <activity android:name="com.ali.music.poplayer.utils.PopLayerDebugActivity" android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="http" android:host="tb.cn" android:path="/n/poplayerdebug" />
+            </intent-filter>
+        </activity>
+        <service android:name="com.ali.music.poplayer.utils.PopLayerConsole" android:exported="false" />
+        <service android:name="com.taobao.accs.ChannelService" android:exported="true" android:process=":channel">
+            <intent-filter>
+                <action android:name="com.taobao.accs.intent.action.SERVICE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.taobao.accs.intent.action.ELECTION" />
+            </intent-filter>
+        </service>
+        <service android:name="com.taobao.accs.data.MsgDistributeService" android:exported="true">
+            <intent-filter>
+                <action android:name="com.taobao.accs.intent.action.RECEIVE" />
+            </intent-filter>
+        </service>
+        <receiver android:name="com.taobao.accs.EventReceiver" android:process=":channel">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+                <data android:scheme="package" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.taobao.accs.ServiceReceiver" android:process=":channel">
+            <intent-filter>
+                <action android:name="com.taobao.accs.intent.action.COMMAND" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.taobao.accs.intent.action.START_FROM_AGOO" />
+            </intent-filter>
+        </receiver>
+        <service android:name="org.android.agoo.accs.AgooService" android:exported="true">
+            <intent-filter>
+                <action android:name="com.taobao.accs.intent.action.RECEIVE" />
+            </intent-filter>
+        </service>
+        <receiver android:name="com.taobao.agoo.AgooCommondReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="com.sds.android.ttpod.intent.action.COMMAND" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+        <service android:name="com.taobao.agoo.TaobaoMessageIntentReceiverService" android:exported="true">
+            <intent-filter>
+                <action android:name="org.android.agoo.client.MessageReceiverService" />
+            </intent-filter>
+        </service>
+        <activity android:theme="@style/Theme.US_OverSeaActivity" android:name="com.ali.music.usersystem.presentation.view.activity.PhonePersonalVerifyActivity" android:screenOrientation="portrait">
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.usersystem" />
+        </activity>
+        <activity android:theme="@style/Theme.US_OverSeaActivity" android:name="com.ali.music.usersystem.presentation.view.activity.OverSeaCodeActivity" android:exported="false" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/global_user_oversea" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.usersystem" />
+        </activity>
+        <activity android:theme="@style/Theme.US_LoginActivity" android:name="com.ali.music.usersystem.presentation.view.activity.ChooseVerifyModeActivity" android:screenOrientation="portrait">
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.usersystem" />
+        </activity>
+        <activity android:theme="@style/Theme.US_OverSeaActivity" android:name="com.ali.music.usersystem.presentation.view.activity.PhoneAuthVerifyActivity" android:screenOrientation="portrait">
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.usersystem" />
+        </activity>
+        <activity android:theme="@style/Theme.US_OverSeaActivity" android:name="com.ali.music.usersystem.presentation.view.activity.MailPersonalVerifyActivity" android:screenOrientation="portrait">
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.usersystem" />
+        </activity>
+        <activity android:theme="@style/Theme.US_OverSeaActivity" android:name="com.ali.music.usersystem.presentation.view.activity.MailAuthVerifyActivity" android:screenOrientation="portrait">
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.usersystem" />
+        </activity>
+        <activity android:theme="@style/Theme.US_LoginActivity" android:name="com.ali.music.usersystem.presentation.view.activity.ChangePwdActivity" android:screenOrientation="portrait">
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.usersystem" />
+        </activity>
+        <activity android:theme="@style/Theme.US_LoginActivity" android:name="com.ali.music.usersystem.presentation.view.activity.ResetPwdActivity" android:screenOrientation="portrait">
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.usersystem" />
+        </activity>
+        <activity android:theme="@style/Theme.US_LoginActivity" android:name="com.ali.music.usersystem.presentation.view.activity.DeviceManagerActivity" android:launchMode="singleTask" android:screenOrientation="portrait">
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.usersystem" />
+        </activity>
+        <activity android:theme="@style/Theme.US_LoginActivity" android:name="com.ali.music.usersystem.presentation.view.activity.EditUserInfoActivity" android:exported="false" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/global_user_profile_edit" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.usersystem" />
+        </activity>
+        <activity android:theme="@style/Theme.US_LoginActivity" android:name="com.ali.music.usersystem.presentation.view.activity.AccountSecurityActivity" android:exported="false" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/global_user_account_secure" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.usersystem" />
+        </activity>
+        <activity android:theme="@style/Theme.US_LoginActivity" android:name="com.ali.music.usersystem.presentation.view.activity.EditNickNameActivity" android:screenOrientation="portrait">
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.usersystem" />
+        </activity>
+        <activity android:theme="@style/Theme.US_LoginActivity" android:name="com.ali.music.usersystem.presentation.view.activity.EditSignatureActivity" android:screenOrientation="portrait">
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.usersystem" />
+        </activity>
+        <activity android:theme="@*android:style/Theme.Translucent" android:name="com.ali.music.usersystem.presentation.view.activity.AuthorizeEmptyActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/authorize_empty" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.usersystem" />
+        </activity>
+        <activity android:theme="@style/Theme.US_OverSeaActivity" android:name="com.ali.music.usersystem.presentation.view.activity.ProvinceFragmentActivity" android:exported="false" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/global_user_province" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.usersystem" />
+        </activity>
+        <activity android:theme="@style/Theme.US_OverSeaActivity" android:name="com.ali.music.usersystem.presentation.view.activity.CityFragmentActivity" android:screenOrientation="portrait">
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.usersystem" />
+        </activity>
+        <activity android:theme="@style/Theme.US_OverSeaActivity" android:name="com.ali.music.usersystem.presentation.view.activity.AreaFragmentActivity" android:screenOrientation="portrait">
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.usersystem" />
+        </activity>
+        <activity android:theme="@style/Theme.US_LoginActivity" android:name="com.ali.music.usersystem.presentation.view.activity.USWebViewActivity" android:exported="false" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/local_user_login" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.usersystem" />
+        </activity>
+        <activity android:theme="@style/Theme.US_LoginActivity" android:name="com.ali.music.usersystem.presentation.view.activity.USWebViewNoFaqActivity" android:screenOrientation="portrait">
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.usersystem" />
+        </activity>
+        <activity android:name="com.alipay.sdk.app.H5AuthActivity" android:exported="false" android:screenOrientation="behind" android:configChanges="keyboardHidden|navigation|orientation">
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.usersystem" />
+        </activity>
+        <activity android:name="com.sds.android.ttpod.wxapi.WXEntryActivity" android:exported="true">
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.usersystem.sdk" />
+        </activity>
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.tencent.connect.common.AssistActivity" android:screenOrientation="behind" android:configChanges="keyboardHidden|orientation">
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.usersystem.sdk" />
+        </activity>
+        <activity android:name="com.tencent.tauth.AuthActivity" android:launchMode="singleTask" android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="tencent100240447" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.usersystem.sdk" />
+        </activity>
+        <service android:name="com.ali.music.usersystem.sdk.service.UserSystemService">
+            <intent-filter>
+                <action android:name="com.ali.music.aidlservice.usersystem.IUserSystemService" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.usersystem.sdk" />
+        </service>
+        <activity android:theme="@style/Theme.NoBackgroundAndTitle.Login" android:name="com.ali.user.mobile.login.ui.UserLoginActivity" android:excludeFromRecents="true" android:launchMode="singleTask" android:screenOrientation="portrait" android:configChanges="keyboardHidden|navigation|orientation|screenSize" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustResize|adjustNothing">
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.usersystem.sdk" />
+        </activity>
+        <activity android:theme="@style/Theme.NoBackgroundAndTitle.Login" android:name="com.ali.user.mobile.login.ui.UserAccountActivity" android:excludeFromRecents="true" android:launchMode="singleTask" android:screenOrientation="portrait" android:configChanges="keyboardHidden|navigation|orientation|screenSize" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustResize|adjustNothing">
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.usersystem.sdk" />
+        </activity>
+        <activity android:theme="@style/Theme.NoBackgroundAndTitle.Login" android:name="com.ali.user.mobile.login.ui.AliUserLoginSMSActivity" android:launchMode="singleTask" android:screenOrientation="portrait" android:configChanges="keyboardHidden|navigation|orientation|screenSize" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustResize|adjustNothing">
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.usersystem.sdk" />
+        </activity>
+        <activity android:theme="@style/Theme.NoBackgroundAndTitle.Login" android:name="com.ali.user.mobile.webview.WebViewActivity" android:excludeFromRecents="true" android:screenOrientation="portrait" android:configChanges="keyboardHidden|navigation|orientation|screenSize" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustResize|adjustNothing">
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.usersystem.sdk" />
+        </activity>
+        <activity android:theme="@style/Theme.NoBackgroundAndTitle.Login" android:name="com.ali.user.mobile.webview.WindVaneWebViewActivity" android:exported="false" android:screenOrientation="portrait" android:configChanges="keyboardHidden|navigation|orientation|screenSize" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustResize|adjustNothing">
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.usersystem.sdk" />
+        </activity>
+        <activity android:theme="@style/Theme.NoBackgroundAndTitle.Login" android:name="com.ali.user.mobile.webview.SSOV2WebviewActivity" android:excludeFromRecents="true" android:screenOrientation="portrait" android:configChanges="keyboardHidden|navigation|orientation|screenSize" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustResize|adjustNothing">
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.usersystem.sdk" />
+        </activity>
+        <activity android:theme="@style/Theme.NoBackgroundAndTitle.Login" android:name="com.ali.user.mobile.login.ui.BindActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|navigation|orientation|screenSize" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustResize|adjustNothing">
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.usersystem.sdk" />
+        </activity>
+        <activity android:theme="@style/Theme.NoBackgroundAndTitle.Login" android:name="com.ali.user.mobile.account.bind.TaobaoAccountBindActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|navigation|orientation|screenSize" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustResize|adjustNothing">
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.usersystem.sdk" />
+        </activity>
+        <activity android:theme="@style/Theme.NoBackgroundAndTitle.Login" android:name="com.ali.user.mobile.register.ui.AliUserRegisterActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|navigation|orientation|screenSize" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustResize|adjustNothing">
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.usersystem.sdk" />
+        </activity>
+        <activity android:theme="@style/Theme.NoBackgroundAndTitle.Login" android:name="com.ali.user.mobile.login.ui.PlaceHolderActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|navigation|orientation|screenSize" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustResize|adjustNothing">
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.usersystem.sdk" />
+        </activity>
+        <activity android:theme="@style/Theme.NoBackgroundAndTitle.Login" android:name="com.ali.user.mobile.webview.HtmlActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|navigation|orientation|screenSize" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustResize|adjustNothing">
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.usersystem.sdk" />
+        </activity>
+        <activity android:theme="@style/Theme.NoBackgroundAndTitle.Login" android:name="com.ali.user.mobile.register.ui.AliUserRegisterChoiceRegionActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|navigation|orientation|screenSize" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustResize|adjustNothing">
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.usersystem.sdk" />
+        </activity>
+        <activity android:theme="@style/Theme.NoBackgroundAndTitle.Login" android:name="com.ali.user.mobile.register.ui.AliUserRegisterSMSActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|navigation|orientation|screenSize" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustResize|adjustNothing">
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.usersystem.sdk" />
+        </activity>
+        <activity android:theme="@style/Theme.NoBackgroundAndTitle.Login" android:name="com.ali.user.mobile.webview.AliUserRegisterWebview" android:screenOrientation="portrait" android:configChanges="keyboardHidden|navigation|orientation|screenSize" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustResize|adjustNothing">
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.usersystem.sdk" />
+        </activity>
+        <activity android:theme="@style/Theme.NoBackgroundAndTitle.Login" android:name="com.ali.user.mobile.register.ui.AliUserRegisterSetLoginPassword" android:screenOrientation="portrait" android:configChanges="keyboardHidden|navigation|orientation|screenSize" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustResize|adjustNothing">
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.usersystem.sdk" />
+        </activity>
+        <activity android:theme="@style/Theme.NoBackgroundAndTitle.Login" android:name="com.ali.user.mobile.account.bind.NewAccountBindActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|navigation|orientation|screenSize" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustResize|adjustNothing">
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.usersystem.sdk" />
+        </activity>
+        <service android:name="com.taobao.android.sso.internal.PidGetterService" android:exported="true">
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.usersystem.sdk" />
+        </service>
+        <service android:name="com.taobao.android.sso.internal.AuthenticationService" android:permission="android.permission.ACCOUNT_MANAGER" android:enabled="false" android:exported="true">
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator" />
+            </intent-filter>
+            <meta-data android:name="android.accounts.AccountAuthenticator" android:resource="@xml/taobao_authenticator" />
+            <meta-data android:name="android.accounts.AccountAuthenticator.customTokens" android:value="true" />
+            <meta-data android:name="com.taobao.android.sso.Version" android:value="@integer/sso_version_code" />
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.usersystem.sdk" />
+        </service>
+        <service android:name="com.taobao.android.sso.internal.AlipayAuthenticationService" android:permission="android.permission.ACCOUNT_MANAGER" android:enabled="false" android:exported="true">
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator" />
+            </intent-filter>
+            <meta-data android:name="android.accounts.AccountAuthenticator" android:resource="@xml/alipay_authenticator" />
+            <meta-data android:name="android.accounts.AccountAuthenticator.customTokens" android:value="true" />
+            <meta-data android:name="com.taobao.android.sso.Version" android:value="@integer/sso_version_code" />
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.usersystem.sdk" />
+        </service>
+        <activity android:theme="@style/Theme.SlidingClosableActivity" android:name="com.ali.music.uiframework.WrapFragmentActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.ali.music.multiimageselector.MultiImageSelectorActivity" android:exported="false" android:screenOrientation="portrait" android:configChanges="orientation|screenSize">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/image_selector" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.multiimageselector" />
+        </activity>
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.ali.music.multiimageselector.MultiImagePreviewActivity" android:exported="false" android:screenOrientation="portrait" android:configChanges="orientation|screenSize">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/image_preview" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.multiimageselector" />
+        </activity>
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.ali.music.share.presentation.view.ShareActivity" android:launchMode="singleTask" android:configChanges="keyboardHidden|navigation|orientation|screenSize">
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+                <action android:name="com.immomo.momo.sdk.action.ACTION_SDK_RESP_ACTIVITY" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.share.presentation" />
+        </activity>
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.ali.music.share.presentation.view.ShareWebActivity" android:launchMode="singleTask" android:screenOrientation="portrait">
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.share.presentation" />
+        </activity>
+        <activity android:name="com.sina.weibo.sdk.component.WeiboSdkBrowser" android:exported="false" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="adjustResize|adjustNothing">
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.share.presentation" />
+        </activity>
+        <service android:name="com.ali.music.share.presentation.IShareServiceImpl">
+            <intent-filter>
+                <action android:name="com.ali.music.aidlservice.share.IShareService" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.share.presentation" />
+        </service>
+        <activity android:theme="@style/Theme.SlidingClosableActivity" android:name="com.ali.music.web.internal.WebViewActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:windowSoftInputMode="adjustResize|adjustNothing" />
+        <service android:name="com.alibaba.tcms.service.TCMSService" android:exported="true" android:process=":TcmsService">
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.amimsdk" />
+        </service>
+        <service android:name="com.alibaba.tcms.service.TCMSService$TCMSKernalService" android:process=":TcmsService">
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.amimsdk" />
+        </service>
+        <service android:name="com.alibaba.tcms.service.ListenerService" android:exported="true">
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.amimsdk" />
+        </service>
+        <service android:name="com.ali.music.amimsdk.IMSDKService">
+            <intent-filter>
+                <action android:name="com.ali.music.aidlservice.imsdk.IIMSDKService" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.amimsdk" />
+        </service>
+        <service android:name="com.ali.music.amimchatroom.service.ACCSService">
+            <intent-filter>
+                <action android:name="com.taobao.accs.intent.action.RECEIVE" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.amimsdk" />
+        </service>
+        <activity android:theme="@style/Theme.SlidingClosableActivity" android:name="com.ali.music.im.presentation.view.SingleChatActivity" android:exported="false" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenSize">
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.im" />
+        </activity>
+        <activity android:theme="@style/Theme.SlidingClosableActivity" android:name="com.ali.music.im.presentation.view.XActivity" android:exported="false" android:screenOrientation="portrait">
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.im" />
+        </activity>
+        <activity android:theme="@*android:style/Theme.NoDisplay" android:name="com.ali.music.im.presentation.view.MessageIntentFilterActivity" android:exported="false">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/global_im_my_message" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/global_im_chat" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.im" />
+        </activity>
+        <activity android:theme="@style/Theme.SlidingClosableActivity" android:name="com.ali.music.im.presentation.view.MyMessageActivity" android:exported="false">
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.im" />
+        </activity>
+        <activity android:theme="@style/Theme.SlidingClosableActivity" android:name="com.ali.music.im.presentation.view.IMSettingActivity" android:exported="false">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/global_im_setting" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.im" />
+        </activity>
+        <service android:name="com.ali.music.im.IMService">
+            <intent-filter>
+                <action android:name="com.ali.music.aidlservice.im.IIMService" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.im" />
+        </service>
+        <service android:name="com.alibaba.analytics.AnalyticsService" android:exported="false" android:process=":channel" />
+        <activity android:label="@string/app_name" android:name="com.alibaba.wireless.security.framework.SGProxyActivity">
+            <intent-filter>
+                <action android:name="com.wireless.security.open.framework.DLProxyActivity.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/Update.Theme.NoBackgroundAndTitle" android:name="com.taobao.update.lightapk.storagespace.SpaceActivity" />
+        <activity android:theme="@style/Update.Transparent_appcompat" android:name="com.taobao.update.lightapk.BundleNotFoundActivity" android:exported="false" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="adjustPan|adjustNothing" />
+        <service android:name="com.taobao.update.bundle.dexmerge.DexMergeService" android:process=":dexmerge">
+            <intent-filter>
+                <action android:name="com.taobao.update.bundle.dexmerge.DexMergeService" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.taobao.update.dexmerge" />
+        </service>
+        <activity android:name="com.ali.music.ttanalytics_android.view.AliLogConfigActivity" android:exported="false" />
+        <activity android:name="com.ali.music.ttanalytics_android.view.AllStatsLogActivity" android:exported="false" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.ali.music.video.presentation.view.mv.VPActivity" android:exported="false" android:configChanges="keyboard|keyboardHidden|orientation|screenSize">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/livehouse_mv" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.video" />
+        </activity>
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.ali.music.video.presentation.view.tradevideo.TradeVideoActivity" android:exported="false" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenSize">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/livehouse_video" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.video" />
+        </activity>
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.ali.music.video.presentation.view.liveroom.LiveRoomActivity" android:exported="false" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:hardwareAccelerated="true">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/livehouse_liveroom" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.video" />
+        </activity>
+        <activity android:theme="@style/Theme.SlidingClosableActivity" android:name="com.ali.music.video.presentation.view.subscribe.MySubscribeActivity" android:exported="false" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenSize">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/livehouse_mybookinglive" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.video" />
+        </activity>
+        <activity android:theme="@style/Theme.SlidingClosableActivity" android:name="com.ali.music.video.presentation.view.mine.MyAccountActivity" android:exported="false" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenSize">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/livehouse_mybalance" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.video" />
+        </activity>
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.ali.music.video.presentation.view.feed.VideoFeedActivity" android:exported="false" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenSize">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/video_relay" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.video" />
+        </activity>
+        <activity android:theme="@style/Theme.SlidingClosableActivity" android:name="com.ali.music.video.presentation.view.mine.MyRechargeActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenSize">
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.video" />
+        </activity>
+        <activity android:theme="@style/Theme.SlidingClosableActivity" android:name="com.ali.music.video.presentation.view.hybrid.LHWebActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenSize">
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.video" />
+        </activity>
+        <activity android:theme="@style/Theme.SlidingClosableActivity" android:name="com.ali.music.video.presentation.view.replay.ReplayActivity" android:exported="false" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenSize">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/livehouse_replay" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.video" />
+        </activity>
+        <activity android:theme="@style/Theme.SlidingClosableActivity" android:name="com.ali.music.music.presentation.SingerMusicActivity" android:exported="false" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenSize">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/music_singer" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.music" />
+        </activity>
+        <activity android:theme="@style/Theme.SlidingClosableActivity" android:name="com.ali.music.music.presentation.MyMusicActivity" android:exported="false" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenSize">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/music_bought" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.music" />
+        </activity>
+        <activity android:theme="@style/Theme.SlidingClosableActivity" android:name="com.ali.music.music.presentation.AlbumActivity" android:exported="false" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenSize">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/music_album" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.music" />
+        </activity>
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.ali.music.fanstab.presentation.view.FansTabActivity" android:exported="false" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/fans_tab" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.fanstab" />
+        </activity>
+        <activity android:theme="@style/Theme.SlidingClosableActivity" android:name="com.ali.music.photo.presentation.view.PhotoSelectActivity" android:exported="false" android:screenOrientation="portrait" android:configChanges="orientation|screenSize">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/image_selector_new_album" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.photo" />
+        </activity>
+        <activity android:theme="@style/Theme.SlidingClosableActivity" android:name="com.ali.music.photo.presentation.view.PhotoPublishActivity" android:exported="false" android:launchMode="singleTask" android:screenOrientation="portrait" android:configChanges="orientation|screenSize">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/photo_publish" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.photo" />
+        </activity>
+        <activity android:theme="@style/Theme.SlidingClosableActivity" android:name="com.ali.music.photo.presentation.view.PhotoAlbumDetailActivity" android:exported="false" android:screenOrientation="portrait" android:configChanges="orientation|screenSize">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/album_detail" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.photo" />
+        </activity>
+        <activity android:theme="@style/Theme.SlidingClosableActivity" android:name="com.ali.music.photo.presentation.view.PhotoDetailActivity" android:exported="false" android:screenOrientation="portrait" android:configChanges="orientation|screenSize">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/photo_detail" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.photo" />
+        </activity>
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.ali.music.capture.live.presentation.view.capture.LiveCaptureActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateUnchanged|stateHidden|stateAlwaysHidden|stateAlwaysVisible|adjustResize|adjustNothing">
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.capture" />
+        </activity>
+        <activity android:name="com.ali.music.capture.live.presentation.view.capture.FandomListActivity" android:exported="false" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenSize">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/livehouse_livecapture" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.capture" />
+        </activity>
+        <activity android:theme="@style/Theme.SlidingClosableActivity" android:name="com.ali.music.publish.postdaily.presentation.view.DailyPostActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustResize|adjustNothing">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/fans_daily_post_create" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.publish" />
+        </activity>
+        <activity android:name="com.ali.music.publish.TestPublishActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize|adjustNothing">
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.publish" />
+        </activity>
+        <activity android:theme="@style/Theme.SlidingClosableActivity" android:name="com.ali.music.publish.postmix.presentation.view.ImagePostEditActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:windowSoftInputMode="adjustResize|adjustNothing">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/fans_mix_post_create" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.publish" />
+        </activity>
+        <activity android:theme="@style/Theme.SlidingClosableActivity" android:name="com.ali.music.publish.postvideo.presentation.view.VideoPostActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:windowSoftInputMode="adjustResize|adjustNothing">
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.publish" />
+        </activity>
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.ali.music.publish.postvideo.presentation.view.VideoPostDelegateActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:windowSoftInputMode="adjustResize|adjustNothing">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/fans_video_post_create" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.publish" />
+        </activity>
+        <activity android:theme="@style/Theme.SlidingClosableActivity" android:name="com.ali.music.publish.postimage.presentation.view.ImagePostActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:windowSoftInputMode="adjustResize|adjustNothing">
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.publish" />
+        </activity>
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.ali.music.publish.postimage.presentation.view.ImagePostDelegateActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:windowSoftInputMode="adjustResize|adjustNothing">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/fans_image_post_create" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.publish" />
+        </activity>
+        <activity android:theme="@style/Theme.SlidingClosableActivity" android:name="com.ali.music.publish.video.presentation.view.VideoRecordActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustResize|adjustNothing">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/fans_video_record" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.publish" />
+        </activity>
+        <activity android:theme="@style/Theme.SlidingClosableActivity" android:name="com.ali.music.publish.vote.view.VoteEditEntryActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:windowSoftInputMode="adjustPan|adjustNothing">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/fans_vote_create" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.publish" />
+        </activity>
+        <activity android:theme="@style/Theme.SlidingClosableActivity" android:name="com.ali.music.publish.invite.presentation.view.InviteActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustResize|adjustNothing">
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.publish" />
+        </activity>
+        <activity android:theme="@style/Theme.BottomSlidingCloseableActivity" android:name="com.ali.music.publish.entrance.view.PublishEntranceActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustResize|adjustNothing">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/publish_entrance" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.publish" />
+        </activity>
+        <activity android:theme="@style/Theme.SlidingClosableActivity" android:name="com.ali.music.postdetail.reply.presentation.view.PostReplyDetailActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:windowSoftInputMode="adjustResize|adjustNothing">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/fans_post_reply_detail" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.publish" />
+        </activity>
+        <activity android:theme="@style/Theme.SlidingClosableActivity" android:name="com.ali.music.publish.video.presentation.view.VideoPlayActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustResize|adjustNothing">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/fans_video_play" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.publish" />
+        </activity>
+        <activity android:theme="@style/Theme.SlidingClosableActivity" android:name="com.ali.music.postdetail.detail.presentation.view.PostDetailActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateUnchanged|stateHidden|stateAlwaysHidden|stateAlwaysVisible|adjustResize|adjustNothing">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/fans_post_detail" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.publish" />
+        </activity>
+        <activity android:theme="@style/Theme.SlidingClosableActivity" android:name="com.ali.music.postdetail.news.presentation.view.NewsDetailActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustResize|adjustNothing">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/fans_news_detail" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.publish" />
+        </activity>
+        <activity android:theme="@style/Theme.SlidingClosableActivity" android:name="com.ali.music.publish.members.AtUserListActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustResize|adjustNothing">
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.publish" />
+        </activity>
+        <meta-data android:name="LIFECYCLE:com.alibaba.doraemon.impl.lifecycle.LifecycleMonitorFetcher" android:value="" />
+        <meta-data android:name="CRASHMONITOR:com.alibaba.doraemon.impl.crash.CrashMonitorFetcher" android:value="" />
+        <meta-data android:name="CACHE:com.alibaba.doraemon.impl.cache.CacheFetcher" android:value="" />
+        <meta-data android:name="REQDEFCACHE:com.alibaba.doraemon.impl.cache.CacheFetcher" android:value="" />
+        <meta-data android:name="REQTTMPCACHE:com.alibaba.doraemon.impl.cache.CacheFetcher" android:value="" />
+        <meta-data android:name="THREAD:com.alibaba.doraemon.impl.threadpool.ThreadFetcher" android:value="LIFECYCLE" />
+        <meta-data android:name="REQUEST:com.alibaba.doraemon.impl.request.VollyRequestFetcher" android:value="CACHE" />
+        <meta-data android:name="NAVIGATOR:com.alibaba.doraemon.impl.navigator.NavigatorFetcher" android:value="" />
+        <meta-data android:name="EVENTBUTLER:com.alibaba.doraemon.impl.eventbus.EventButlerFetcher" android:value="LIFECYCLE" />
+        <meta-data android:name="AUDIOCACHE:com.alibaba.doraemon.impl.cache.CacheFetcher" android:value="" />
+        <meta-data android:name="IMAGECACHE:com.alibaba.doraemon.impl.cache.CacheFetcher" android:value="" />
+        <meta-data android:name="IMAGE:com.alibaba.doraemon.impl.image.ImageMagicianFetcher" android:value="IMAGECACHE;REQUEST;THREAD" />
+        <meta-data android:name="AUDIO:com.alibaba.doraemon.impl.audio.AudioMagicianFetcher" android:value="AUDIOCACHE;REQUEST;THREAD" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.ali.music.videoselector.view.activity.VideoSelectorActivity" android:configChanges="orientation|screenSize">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/publish_video_select" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.publish" />
+        </activity>
+        <activity android:theme="@style/Theme.SlidingClosableActivity" android:name="com.ali.music.fans.fandomhome.presentation.view.FandomHomePageActivity" android:exported="false" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenSize">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/fans_fandom_homepage" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.fans" />
+        </activity>
+        <activity android:name="com.ali.music.fans.member.presentation.view.activity.FansCommunityMembersActivity" android:exported="false">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/fans_community_member_list" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.fans" />
+        </activity>
+        <activity android:theme="@style/Theme.SlidingClosableActivity" android:name="com.ali.music.fans.topic.presentation.view.activity.PostTopicEntryActivity" android:exported="false" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateHidden|stateAlwaysHidden">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/fans_topic_selector" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.fans" />
+        </activity>
+        <activity android:theme="@style/Theme.SlidingClosableActivity" android:name="com.ali.music.fans.topic.presentation.view.activity.TopicCreateActivity" android:exported="false" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:windowSoftInputMode="adjustResize|adjustNothing">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/fans_topic_create" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.fans" />
+        </activity>
+        <activity android:theme="@style/Theme.SlidingClosableActivity" android:name="com.ali.music.fans.manager.presentation.view.activity.ManagementEntryActivity" android:exported="false" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:windowSoftInputMode="adjustResize|adjustNothing">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/fans_management_entry" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.fans" />
+        </activity>
+        <activity android:theme="@style/Theme.SlidingClosableActivity" android:name="com.ali.music.fans.manager.presentation.view.activity.PendingApproveListActivity" android:exported="false" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:windowSoftInputMode="adjustResize|adjustNothing">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/fans_pending_approve_list" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.fans" />
+        </activity>
+        <activity android:theme="@style/Theme.SlidingClosableActivity" android:name="com.ali.music.fans.manager.presentation.view.activity.ApplyDetailActivity" android:exported="false" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:windowSoftInputMode="adjustResize|adjustNothing">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/fans_manager_apply_detail" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.fans" />
+        </activity>
+        <activity android:theme="@style/Theme.SlidingClosableActivity" android:name="com.ali.music.fans.manager.presentation.view.activity.ManagerGroupListActivity" android:exported="false" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:windowSoftInputMode="adjustResize|adjustNothing">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/fans_manager_group" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.fans" />
+        </activity>
+        <activity android:theme="@style/Theme.SlidingClosableActivity" android:name="com.ali.music.fans.manager.presentation.view.activity.FansPostManageActivity" android:exported="false" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:windowSoftInputMode="adjustResize|adjustNothing">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/fans_post_management" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.fans" />
+        </activity>
+        <activity android:theme="@style/Theme.SlidingClosableActivity" android:name="com.ali.music.fans.fandomsetting.presentation.view.FandomSettingActivity" android:exported="false" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:windowSoftInputMode="adjustResize|adjustNothing">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/fans_fandom_info_setting" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.fans" />
+        </activity>
+        <activity android:theme="@style/Theme.SlidingClosableActivity" android:name="com.ali.music.fans.blackList.presentation.view.activity.BlacklistActivity" android:exported="false" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:windowSoftInputMode="adjustResize|adjustNothing">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/fans_blacklist_management" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.fans" />
+        </activity>
+        <activity android:theme="@style/Theme.SlidingClosableActivity" android:name="com.ali.music.fans.forbidtalk.presentation.view.activity.ForbidTalkActivity" android:exported="false" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:windowSoftInputMode="adjustResize|adjustNothing">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/fans_forbidtalk_management" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.fans" />
+        </activity>
+        <activity android:theme="@style/Theme.SlidingClosableActivity" android:name="com.ali.music.fans.user.presentation.view.JoinedFandomSelectActivity" android:exported="false" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenSize">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/fans_joined_fandom_select" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.fans" />
+        </activity>
+        <activity android:theme="@style/Theme.SlidingClosableActivity" android:name="com.ali.music.fans.user.presentation.view.FansUserListPageActivity" android:exported="false" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:windowSoftInputMode="adjustResize|adjustNothing">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/fans_user_fans_users" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.fans" />
+        </activity>
+        <activity android:theme="@style/Theme.SlidingClosableActivity" android:name="com.ali.music.fans.user.presentation.view.FollowUserListPageActivity" android:exported="false" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:windowSoftInputMode="adjustResize|adjustNothing">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/fans_user_follow_users" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.fans" />
+        </activity>
+        <activity android:theme="@style/Theme.SlidingClosableActivity" android:name="com.ali.music.fans.topic.presentation.view.activity.TopicDetailActivity" android:exported="false" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:windowSoftInputMode="adjustResize|adjustNothing">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/fans_topic_homepage" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.fans" />
+        </activity>
+        <activity android:theme="@style/Theme.SlidingClosableActivity" android:name="com.ali.music.fans.personal.presentation.view.UserHomePageActivity" android:exported="false" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:windowSoftInputMode="adjustResize|adjustNothing">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/fans_user_homepage" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.fans" />
+        </activity>
+        <activity android:theme="@style/Theme.SlidingClosableActivity" android:name="com.ali.music.fans.topic.presentation.view.activity.EssencePostActivity" android:exported="false" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:windowSoftInputMode="adjustResize|adjustNothing">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/fans_essence_post_list" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.fans" />
+        </activity>
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.ali.music.fans.entrance.presentation.view.PublishEntranceActivity" android:exported="false" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:windowSoftInputMode="adjustResize|adjustNothing">
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.fans" />
+        </activity>
+        <activity android:theme="@style/Theme.SlidingClosableActivity" android:name="com.ali.music.fans.sign.presentation.view.activity.CardEditActivity" android:exported="false" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:windowSoftInputMode="adjustResize|adjustNothing">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/fans_signin_editcard" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.fans" />
+        </activity>
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar.Fullscreen" android:name="com.ali.music.fans.sign.presentation.view.activity.FandomSigninDetailActivity" android:exported="false" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:windowSoftInputMode="adjustResize|adjustNothing">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/fans_signin_detail" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.fans" />
+        </activity>
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar.Fullscreen" android:name="com.ali.music.fans.sign.presentation.view.activity.FandomSigninPreviewActivity" android:exported="false" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:windowSoftInputMode="adjustResize|adjustNothing">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/fans_signin_preview" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.fans" />
+        </activity>
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.ali.music.fans.sign.presentation.view.activity.RocketLaunchActivity" android:exported="false" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:windowSoftInputMode="adjustResize|adjustNothing">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/fans_rocket_launch" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.fans" />
+        </activity>
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.ali.music.fans.fandomphoto.presentation.view.activity.FandomPhotoActivity" android:exported="false" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:windowSoftInputMode="adjustResize|adjustNothing">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/album_fandom" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.fans" />
+        </activity>
+        <activity android:theme="@style/Theme.SlidingClosableActivity" android:name="com.ali.music.tour.edit.presentation.view.FandomTourEditActivity" android:exported="false" android:launchMode="singleTop" android:screenOrientation="portrait" android:configChanges="orientation|screenSize">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/fans_tour_edit" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.tour" />
+        </activity>
+        <activity android:theme="@style/Theme.SlidingClosableActivity" android:name="com.ali.music.tour.edit.presentation.view.FandomTourPublishActivity" android:exported="false" android:launchMode="singleTop" android:screenOrientation="portrait" android:configChanges="orientation|screenSize">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/fans_tour_publish" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.tour" />
+        </activity>
+        <activity android:theme="@style/Theme.SlidingClosableActivity" android:name="com.ali.music.tour.comment.presentation.view.CommentActivity" android:exported="false" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustResize|adjustNothing">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/common_comment" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.tour" />
+        </activity>
+        <activity android:theme="@style/Anim_fade" android:name="com.ali.music.tour.tour.presentation.enable.view.TourOpenActivity" android:exported="false" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:windowSoftInputMode="adjustResize|adjustNothing">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/fans_tour_open" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.tour" />
+        </activity>
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.ali.music.tour.list.presentation.view.TourCenterActivity" android:exported="false" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:windowSoftInputMode="adjustResize|adjustNothing">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/fans_tour_center" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.tour" />
+        </activity>
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.ali.music.tour.tour.presentation.enable.view.TourJumpActivity" android:exported="false" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:windowSoftInputMode="adjustResize|adjustNothing">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/tour_all" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.tour" />
+        </activity>
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.ali.music.tour.detail.presentation.view.TourDetailActivity" android:exported="false" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:windowSoftInputMode="adjustResize|adjustNothing">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/fans_tour_detail" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.tour" />
+        </activity>
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.ali.music.tour.manager.presentation.view.TourDetailManagementActivity" android:exported="false" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:windowSoftInputMode="adjustResize|adjustNothing">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/fans_tour_approve_detail" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.tour" />
+        </activity>
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.ali.music.tour.my.presentation.view.MyTourActivity" android:exported="false" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:windowSoftInputMode="adjustResize|adjustNothing">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/tour_my" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.tour" />
+        </activity>
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.ali.music.tour.signmap.presentation.view.SignMapActivity" android:exported="false" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:windowSoftInputMode="adjustResize|adjustNothing">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/fans_tour_signmap" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.tour" />
+        </activity>
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.ali.music.tour.signmap.presentation.view.MapActivity" android:exported="false" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:windowSoftInputMode="adjustResize|adjustNothing">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/tour_map" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.tour" />
+        </activity>
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.ali.music.tour.edit.presentation.view.LocationSearchActivity" android:exported="false" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:windowSoftInputMode="adjustResize|adjustNothing">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/tour_location_search" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.tour" />
+        </activity>
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.ali.music.tour.task.presentation.view.SupportTaskSelectActivity" android:exported="false" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:windowSoftInputMode="adjustResize|adjustNothing">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/fans_support_task_select" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.tour" />
+        </activity>
+        <activity android:theme="@style/Theme.SlidingClosableActivity" android:name="com.ali.music.star.trend.presentation.view.StarTrendActivity" android:exported="false" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenSize">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/star_trend" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.star.trend" />
+        </activity>
+        <activity android:name="com.ali.music.homepage.HomePageActivity">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/page_homepage" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.homepage" />
+        </activity>
+        <activity android:name="com.ali.music.homepage.dailypicks.presentation.view.DailyPicksActivity" android:exported="false" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenSize">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/homepage_daily_picks" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.homepage" />
+        </activity>
+        <provider android:name="com.ali.music.download.internal.DownloadContentProvider" android:process=":support" android:authorities="com.ali.music.download.provider" />
+        <service android:name="com.ali.music.download.internal.DownloadService" android:process=":support" />
+        <activity android:theme="@*android:style/Theme.Holo.Light" android:label="监控点设置" android:name="com.taobao.barrier.entry.offline.config.HurdleConfigActivity" android:enabled="false" android:exported="false">
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.debug" />
+        </activity>
+        <activity android:theme="@*android:style/Theme.Holo.Light" android:label="栅栏设置" android:name="com.taobao.barrier.entry.offline.config.HurdleConfigWrapperActivity" android:enabled="true" android:exported="false">
+            <intent-filter>
+                <action android:name="com.taobao.barrier.CONFIG" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.debug" />
+        </activity>
+        <activity android:theme="@*android:style/Theme.Holo.Light" android:label="栅栏-淘宝" android:name="com.taobao.barrier.entry.offline.config.TaobaoCfgActivity" android:enabled="true" android:exported="false">
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.debug" />
+        </activity>
+        <activity android:name="com.ali.music.debug.DebugActivity">
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.debug" />
+        </activity>
+        <activity android:theme="@style/Theme.SlidingClosableActivity" android:name="com.ali.music.planetweex.AMWeexActivity" android:exported="false" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:windowSoftInputMode="adjustResize|adjustNothing">
+            <intent-filter>
+                <action android:name="com.ali.music.action.navigator.INTERNAL_NAVIGATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ali.music.category.navigator.INTERNAL_NAVIGATION" />
+                <data android:scheme="alimusic" android:host="page.planet" android:path="/page/global_weex_browser" />
+            </intent-filter>
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.planetweex" />
+        </activity>
+        <receiver android:name="com.taobao.weex.WXGlobalEventReceiver" android:enabled="true" android:exported="true">
+            <meta-data android:name="bundleLocation" android:value="com.ali.music.planetweex" />
+        </receiver>
+        <meta-data android:name="bundle_com.ali.music.usersystem.sdk" android:value="com.ali.music.usersystem.sdk.UserSystemSdkApplication,true," />
+        <meta-data android:name="bundle_com.ali.music.explore" android:value="com.ali.music.explore.ExploreTabApplication,true," />
+        <meta-data android:name="bundle_com.ali.music.setting" android:value="com.ali.music.setting.SettingApplication,true," />
+        <meta-data android:name="bundle_com.ali.music.video" android:value="com.ali.music.video.presentation.component.VideoApplication,true,com.ali.music.amimsdk|com.ali.music.aliplanet.api.bundle" />
+        <meta-data android:name="bundle_com.ali.music.share.presentation" android:value="com.ali.music.share.presentation.ShareApplication,true,com.ali.music.usersystem" />
+        <meta-data android:name="bundle_com.ali.music.music" android:value="com.ali.music.music.MusicApplication,true," />
+        <meta-data android:name="bundle_com.ali.music.debug" android:value="com.ali.music.debug.DebugApplication,true," />
+        <meta-data android:name="bundle_com.ali.music.tour" android:value="com.ali.music.tour.TourApplication,true,com.ali.music.aliplanet.api.bundle|com.ali.music.location" />
+        <meta-data android:name="bundle_com.ali.music.star.trend" android:value="com.ali.music.star.trend.StarTrendApplication,true," />
+        <meta-data android:name="bundle_com.ali.music.aliplanet.api.bundle" android:value="com.ali.music.aliplanet.api.bundle.ApiApplication,true," />
+        <meta-data android:name="bundle_com.ali.music.im" android:value="com.ali.music.im.IMApplication,true,com.ali.music.amimsdk" />
+        <meta-data android:name="bundle_com.ali.music.fans.guide" android:value="com.ali.music.fans.guide.FansGuideApplication,true,com.ali.music.aliplanet.api.bundle" />
+        <meta-data android:name="bundle_com.ali.music.multiimageselector" android:value="com.ali.music.multiimageselector.ImageSelectorApplication,true," />
+        <meta-data android:name="bundle_com.ali.music.photo" android:value="com.ali.music.photo.PhotoApplication,true,com.ali.music.aliplanet.api.bundle|com.ali.music.multiimageselector" />
+        <meta-data android:name="bundle_com.ali.music.capture" android:value="com.ali.music.capture.live.presentation.CaptureApplication,true,com.ali.music.aliplanet.api.bundle|com.ali.music.amimsdk|com.ali.music.video" />
+        <meta-data android:name="bundle_com.ali.music.planetweex" android:value="com.ali.music.planetweex.WXApplication,true," />
+        <meta-data android:name="bundle_com.ali.music.usersystem" android:value="com.ali.music.usersystem.UserSystemApplication,true,com.ali.music.usersystem.sdk" />
+        <meta-data android:name="bundle_com.ali.music.publish" android:value="com.ali.music.publish.CreateApplication,true,com.ali.music.aliplanet.api.bundle|com.ali.music.postcard" />
+        <meta-data android:name="bundle_com.ali.music.fanstab" android:value="com.ali.music.fanstab.FansApplication,true,com.ali.music.aliplanet.api.bundle" />
+        <meta-data android:name="bundle_com.ali.music.amimsdk" android:value="com.ali.music.amimsdk.IMSDKApplication,true," />
+        <meta-data android:name="bundle_com.ali.music.postcard" android:value="com.ali.music.postcard.PostCardApplication,true,com.ali.music.aliplanet.api.bundle" />
+        <meta-data android:name="bundle_com.ali.music.manager" android:value="com.ali.music.manager.AddressManagerApplication,true," />
+        <meta-data android:name="bundle_com.ali.music.location" android:value="com.ali.music.location.LocationApplication,true," />
+        <meta-data android:name="bundle_com.ali.music.fans" android:value="com.ali.music.fans.FansApplication,true,com.ali.music.aliplanet.api.bundle|com.ali.music.postcard" />
+    </application>
+</manifest>
