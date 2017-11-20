@@ -58,7 +58,7 @@ def downloadApk(apkUrl, apkName, subFolderName="apkDownload"):
 if __name__ == '__main__':
     appList = []
     columnNames = ["appName", "appId", "categoryName", "fileSize", "appDownCount",
-                   "apkUrl", "pkgName", "versionName", "localApkFileName"]
+                   "apkUrl", "pkgName", "versionName", "localApkFileName", "minSdkVersion", "targetSdkVersion"]
     excelUtil.initWorkBook(*columnNames)
     for x in range(0, 5):
         retry = 0
@@ -68,12 +68,12 @@ if __name__ == '__main__':
             if page:
                 for appInfo in page['obj']:
                     appInfo["localApkFileName"] = "%s_%s.apk" % (appInfo["appName"], appInfo["appId"])
-                    item = [appInfo[x] for x in columnNames]
+                    item = [appInfo.get(x, "") for x in columnNames]
                     appList.append(item)
                     excelUtil.appendItem(*item)
                 break
     excelUtil.close()
 
     print("共抓取app:%s个" % len(appList))
-    for app in appList:
-        downloadApk(app[5], app[8])
+    # for app in appList:
+    #     downloadApk(app[5], app[8])

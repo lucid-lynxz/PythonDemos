@@ -28,6 +28,7 @@ def getTagValue(tag, attribute):
     for tagInfo in tagList:
         # tagStr = tagInfo.toxml()
         # print(tagStr)
+
         attributeValue = tagInfo.getAttribute(attribute)
         return attributeValue
     else:
