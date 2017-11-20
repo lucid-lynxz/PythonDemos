@@ -47,7 +47,9 @@ try:
 
     # 获取有数据的区域最大行号列号: sum(1 for _ in sheet1.columns)  sum(1 for _ in sheet1.rows)
     print("sheet1 相关信息 ", type(sheet1), sheet1.title, sum(1 for _ in sheet1.columns), sum(1 for _ in sheet1.rows))
-    print("max_column", sheet1.max_column, sheet1.max_row, len(sheet1['A']))
+    print("max_column", sheet1.max_column, sheet1.max_row)
+    print("column A has rows = ", len(sheet1['A']))  # A列的行数(最后一个非空单元格)
+    print("row 1 has column  = ", len(sheet1[1]))  # 行1拥有的列数(最后一个非空单元格)
     # colA = tuple(sheet1.columns)[:1]
     # print("col length: ", len(colA))
 
@@ -70,6 +72,9 @@ try:
     # 切片,获取指定单元格组成的区域
     area = tuple(sheet1['a1':'c3'])
     print("length = ", len(area))
+
+    # 获取指定行最大列号
+    # sheet1.row(1).columns
 
     # 选择第1到9行的区域
     for x in range(1, 10):
