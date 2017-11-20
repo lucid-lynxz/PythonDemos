@@ -12,4 +12,5 @@
 
 结果:
 很意外的数据, `14` 竟然占据了半壁江山, 呵呵哒, 谁能告诉我为什么? 
-![minSdk分布图](../res/minSdkVersion分布图.png)
+
+![minSdk分布图](https://github.com/lucid-lynxz/PythonDemos/blob/master/res/minSdkVersion%E5%88%86%E5%B8%83%E5%9B%BE.png?raw=tru)
