@@ -44,3 +44,10 @@ if match:
     print('获取子串成功: ', result)
 else:
     print('获取子串失败')
+
+
+# 正则替换
+link = re.compile("\d+")
+content = "lynxz-333haha"
+info = re.sub(link,'www.github.com',content)
+print(info)
